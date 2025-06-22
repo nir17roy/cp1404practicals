@@ -1,0 +1,12 @@
+BoxLayout:
+    orientation: 'vertical'
+    TextInput:
+        id: input_box
+        text: ''
+        multiline: False
+    Button:
+        text: 'Greet'
+        on_press: output_label.text = "Hello " + input_box.text
+    Label:
+        id: output_label
+        text: 'Your greeting will appear here'
