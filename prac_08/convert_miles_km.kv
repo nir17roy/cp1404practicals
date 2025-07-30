@@ -1,0 +1,25 @@
+# convert_miles_km.kv
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    TextInput:
+        id: input_miles
+        hint_text: 'Enter distance in miles'
+        multiline: False
+        on_text_validate: app.handle_convert()
+        size_hint_y: 0.2
+
+    Button:
+        text: 'Convert to KM'
+        on_press: app.handle_convert()
+        size_hint_y: 0.2
+
+    Label:
+        text: app.result
+        font_size: 24
+        size_hint_y: 0.6
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size
