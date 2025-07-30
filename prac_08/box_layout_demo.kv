@@ -1,0 +1,29 @@
+# box_layout_demo.kv
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    TextInput:
+        id: input_name
+        hint_text: 'Enter your name'
+        multiline: False
+        size_hint_y: 0.2
+
+    Button:
+        text: 'Greet'
+        on_press: app.handle_greet()
+        size_hint_y: 0.2
+
+    Button:
+        text: 'Clear'
+        on_press: app.handle_clear()
+        size_hint_y: 0.2
+
+    Label:
+        text: app.message
+        size_hint_y: 0.4
+        font_size: 24
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size

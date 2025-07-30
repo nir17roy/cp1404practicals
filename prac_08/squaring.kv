@@ -1,0 +1,25 @@
+# squaring.kv
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    TextInput:
+        id: input_number
+        hint_text: 'Enter a number'
+        multiline: False
+        on_text_validate: app.handle_square()
+        size_hint_y: 0.2
+
+    Button:
+        text: 'Square'
+        on_press: app.handle_square()
+        size_hint_y: 0.2
+
+    Label:
+        text: app.result
+        font_size: 24
+        size_hint_y: 0.6
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size
