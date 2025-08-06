@@ -1,0 +1,16 @@
+# dynamic_labels.kv
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    Button:
+        text: 'Generate Labels'
+        on_press: app.create_labels()
+        size_hint_y: 0.2
+
+    BoxLayout:
+        id: labels_box
+        orientation: 'vertical'
+        spacing: 5
+        size_hint_y: 0.8
